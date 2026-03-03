@@ -4,7 +4,53 @@
 <title>Junaid Web Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+<style.pricing{
+  padding:60px 20px;
+}
+
+.price-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.price-card{
+  background:white;
+  color:black;
+  padding:25px;
+  width:260px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.price-card h2{
+  color:#1cc88a;
+}
+
+.price-card button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#4e73df;
+  color:white;
+  cursor:pointer;
+}
+
+.price-card:hover{
+  transform:scale(1.05);
+}
+
+.popular{
+  border:3px solid gold;
+}
+
+body.dark .price-card{
+  background:#222;
+  color:white;
+}>
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -78,7 +124,40 @@ body.dark .card{
   background:#222;
   color:white;
 }
+<section class="pricing">
+<h2 style="text-align:center;">Our Pricing</h2>
 
+<div class="price-container">
+
+<div class="price-card">
+<h3>Basic</h3>
+<h2>₹1999</h2>
+<p>1 Page Website</p>
+<p>Responsive Design</p>
+<p>Basic Support</p>
+<button>Get Started</button>
+</div>
+
+<div class="price-card popular">
+<h3>Standard</h3>
+<h2>₹4999</h2>
+<p>5 Pages Website</p>
+<p>Modern Design</p>
+<p>WhatsApp Integration</p>
+<button>Most Popular</button>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<h2>₹9999</h2>
+<p>Full Business Website</p>
+<p>Premium Design</p>
+<p>Priority Support</p>
+<button>Get Started</button>
+</div>
+
+</div>
+</section>
 /* Footer */
 footer{
   text-align:center;
