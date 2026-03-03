@@ -3,82 +3,118 @@
 <head>
 <title>Junaid Web Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family:Arial, sans-serif;
-  background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+body{
+  background:linear-gradient(135deg,#4e73df,#8e44ad);
   color:white;
 }
 
-header{
-  padding:20px;
-  text-align:center;
-  background: rgba(0,0,0,0.3);
-}
-
+/* Navbar */
 nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.3);
+  padding:15px;
   text-align:center;
-  padding:10px;
+  backdrop-filter:blur(10px);
 }
 
 nav a{
   color:white;
-  margin:0 15px;
+  margin:0 20px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
 }
 
-section{
-  padding:40px 20px;
+nav a:hover{
+  color:#ffd700;
+}
+
+/* Hero Section */
+.hero{
+  padding:80px 20px;
   text-align:center;
 }
 
-button{
-  padding:12px 25px;
+.hero h1{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
   background:white;
   color:#333;
-  border:none;
-  border-radius:25px;
-  font-size:16px;
-  cursor:pointer;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-button:hover{
-  background:#ddd;
+.btn:hover{
+  background:#ffd700;
+  transform:scale(1.05);
 }
 
-footer{
+/* Services */
+.services{
+  background:white;
+  color:#333;
+  padding:60px 20px;
   text-align:center;
-  padding:15px;
-  background: rgba(0,0,0,0.3);
 }
 
-/* Services Cards */
+.services h2{
+  margin-bottom:40px;
+  font-size:28px;
+}
+
 .cards{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:20px;
-  margin-top:30px;
 }
 
 .card{
-  background:white;
-  color:#333;
-  padding:20px;
-  width:250px;
+  background:#f5f5f5;
+  width:280px;
+  padding:25px;
   border-radius:15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* Footer */
+footer{
+  padding:20px;
+  text-align:center;
+  background:#222;
+  font-size:14px;
 }
 </style>
 </head>
-<body>
 
-<header>
-  <h1>Junaid Web Services</h1>
-  <p>Affordable & Professional Websites</p>
-</header>
+<body>
 
 <nav>
   <a href="#">Home</a>
@@ -86,35 +122,32 @@ footer{
   <a href="#">Contact</a>
 </nav>
 
-<section>
-  <h2>I Build Websites That Grow Your Business</h2>
-  <p>Simple, Fast & Mobile Friendly Websites for Shops, Tuition & Small Business.</p>
-  <br>
-  <a href="https://wa.me/91XXXXXXXXXX">
-    <button>Contact on WhatsApp</button>
-  </a>
+<section class="hero">
+  <h1>Junaid Web Services</h1>
+  <p>Affordable, Fast & Professional Websites for Your Business</p>
+  <a href="https://wa.me/916398898217" class="btn">Contact on WhatsApp</a>
 </section>
 
-<section style="background: rgba(0,0,0,0.2);">
+<section class="services">
   <h2>My Services</h2>
   <div class="cards">
     <div class="card">
       <h3>Business Website</h3>
-      <p>Professional website for shops & businesses.</p>
+      <p>Modern website for shops & businesses.</p>
     </div>
     <div class="card">
       <h3>Coaching Website</h3>
-      <p>Website for tuition & coaching centers.</p>
+      <p>Professional website for tuition centers.</p>
     </div>
     <div class="card">
-      <h3>WhatsApp Setup</h3>
-      <p>Direct WhatsApp chat integration.</p>
+      <h3>WhatsApp Integration</h3>
+      <p>Direct chat button for fast customer response.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Junaid Web Services
+  © 2026 Junaid Web Services | All Rights Reserved
 </footer>
 
 </body>
