@@ -2,31 +2,125 @@
 <html>
 <head>
 <title>Junaid Web Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:linear-gradient(135deg,#4e73df,#1cc88a);
   color:white;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.4);
+  padding:15px;
   text-align:center;
+  backdrop-filter:blur(10px);
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
 .hero{
-  margin-top:100px;
-  animation:fadeIn 2s ease-in-out;
+  text-align:center;
+  padding:100px 20px;
+  animation:fadeIn 1.5s ease-in-out;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#ffd700;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  transform:scale(1.05);
+}
+
+.services{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:50px 20px;
+}
+
+.card{
+  background:white;
+  color:black;
+  padding:20px;
+  width:250px;
+  border-radius:15px;
+  text-align:center;
+  animation:slideUp 1s ease forwards;
+  opacity:0;
+}
+
+.card:nth-child(1){animation-delay:0.2s;}
+.card:nth-child(2){animation-delay:0.4s;}
+.card:nth-child(3){animation-delay:0.6s;}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.4);
 }
 
 @keyframes fadeIn{
   from{opacity:0;}
   to{opacity:1;}
 }
+
+@keyframes slideUp{
+  from{transform:translateY(40px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
 </style>
 </head>
 
 <body>
 
-<h1>Welcome Junaid 🚀</h1>
-<p>Your Website is Live!</p>
+<nav>Junaid Web Services 🚀</nav>
+
+<section class="hero">
+<h1>Build Your Dream Website</h1>
+<p>I create modern, fast & responsive websites.</p>
+<a href="#" class="btn">Contact Me</a>
+</section>
+
+<section class="services">
+<div class="card">
+<h3>Website Design</h3>
+<p>Modern & responsive designs.</p>
+</div>
+
+<div class="card">
+<h3>Landing Pages</h3>
+<p>High converting landing pages.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Sites</h3>
+<p>Professional personal websites.</p>
+</div>
+</section>
+
+<footer>
+© 2026 Junaid Web Services
+</footer>
 
 </body>
 </html>
