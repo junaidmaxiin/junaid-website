@@ -10,9 +10,15 @@ body{
   font-family:Arial, sans-serif;
   background:linear-gradient(135deg,#4e73df,#1cc88a);
   color:white;
+  transition:0.4s;
 }
 
-/* Navigation */
+body.dark{
+  background:#111;
+  color:white;
+}
+
+/* Navbar */
 nav{
   position:sticky;
   top:0;
@@ -20,21 +26,26 @@ nav{
   padding:15px;
   text-align:center;
   font-weight:bold;
-  letter-spacing:1px;
 }
 
-/* Hero Section */
+/* Toggle Button */
+.toggle-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  padding:8px 15px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* Hero */
 .hero{
   text-align:center;
   padding:100px 20px;
-  animation:fadeIn 1.5s ease-in-out;
 }
 
-.hero h1{
-  font-size:40px;
-}
-
-/* Button */
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -44,12 +55,6 @@ nav{
   text-decoration:none;
   font-weight:bold;
   border-radius:30px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:white;
-  transform:scale(1.05);
 }
 
 /* Services */
@@ -67,14 +72,12 @@ nav{
   padding:20px;
   width:250px;
   border-radius:15px;
-  text-align:center;
-  animation:slideUp 1s ease forwards;
-  opacity:0;
 }
 
-.card:nth-child(1){animation-delay:0.2s;}
-.card:nth-child(2){animation-delay:0.4s;}
-.card:nth-child(3){animation-delay:0.6s;}
+body.dark .card{
+  background:#222;
+  color:white;
+}
 
 /* Footer */
 footer{
@@ -82,41 +85,12 @@ footer{
   padding:20px;
   background:rgba(0,0,0,0.4);
 }
-
-/* WhatsApp Button */
-.whatsapp-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  font-size:24px;
-  padding:15px 18px;
-  border-radius:50%;
-  text-decoration:none;
-  box-shadow:0 4px 15px rgba(0,0,0,0.3);
-  animation:pop 1s ease-in-out infinite alternate;
-}
-
-/* Animations */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes slideUp{
-  from{transform:translateY(40px); opacity:0;}
-  to{transform:translateY(0); opacity:1;}
-}
-
-@keyframes pop{
-  from{transform:scale(1);}
-  to{transform:scale(1.1);}
-}
 </style>
 </head>
 
 <body>
+
+<button class="toggle-btn" onclick="toggleMode()">🌙 Mode</button>
 
 <nav>Junaid Web Services 🚀</nav>
 
@@ -147,7 +121,11 @@ footer{
 © 2026 Junaid Web Services
 </footer>
 
-<a href="#" class="whatsapp-btn">💬</a>
+<script>
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
